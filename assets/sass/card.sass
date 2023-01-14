@@ -2,13 +2,13 @@
 
 .container
     padding: 20px
-    
+
 .card
     position: relative
     background-color: white
     max-width: 335px
-    margin: 30% auto //ajusta altura do card
-    padding: 100px 20px 60px 20px
+    margin: 100px auto //ajusta altura do card
+    padding: 100px 20px 20px 20px
     border-radius: 20px
     box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.2)
     &__img
@@ -26,22 +26,35 @@
         font-size: 2.5em
         margin-top: 20px
     .questions
-        &__item
+        .item
             border-bottom: 2px solid variables.$dividers-color
             padding: 20px 0px
-            &--active .questions__title
+            &--active .item__title
                 font-weight: 700
-            &--active .questions__answers
+            &--active .item__footer
+                visibility: visible
+                height: 40px
+            &--active .item__ico
+                transform: rotate(0deg)
+            &__header
+                display: flex
+                justify-content: space-between
+                align-items: center
+                cursor: pointer
+            &__title
+                font-size: 1.1em
+                color: variables.$neutral-color1-text
+            &__ico
+                transform: rotate(180deg)
+                transition: .3s all
+            &__footer
+                color: variables.$neutral-color2-text
+                transition: .3s all
+                top: 0
+                transition: .3s
+                height: 0px
+                visibility: hidden
                 display: block
-                height: 30px
-        &__title
-            font-size: 1.1em
-            color: variables.$neutral-color1-text
-            cursor: pointer
-        &__answers
-            color: variables.$neutral-color2-text
-            display: none
-            height: 0px
-            transition: all 1s ease-out
-            &__item
+                overflow-y: hidden
+            &__answers
                 margin-top: 10px

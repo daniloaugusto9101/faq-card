@@ -9,6 +9,8 @@
 body {
   background-image: linear-gradient(180deg, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
   height: 100vh;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .container {
@@ -19,8 +21,8 @@ body {
   position: relative;
   background-color: white;
   max-width: 335px;
-  margin: 30% auto;
-  padding: 100px 20px 60px 20px;
+  margin: 100px auto;
+  padding: 100px 20px 20px 20px;
   border-radius: 20px;
   box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.2);
 }
@@ -41,29 +43,45 @@ body {
   font-size: 2.5em;
   margin-top: 20px;
 }
-.card .questions__item {
+.card .questions .item {
   border-bottom: 2px solid hsl(240deg, 5%, 91%);
   padding: 20px 0px;
 }
-.card .questions__item--active .questions__title {
+.card .questions .item--active .item__title {
   font-weight: 700;
 }
-.card .questions__item--active .questions__answers {
-  display: block;
-  height: 30px;
+.card .questions .item--active .item__footer {
+  visibility: visible;
+  height: 40px;
 }
-.card .questions__title {
-  font-size: 1.1em;
-  color: hsl(237deg, 12%, 33%);
+.card .questions .item--active .item__ico {
+  transform: rotate(0deg);
+}
+.card .questions .item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
 }
-.card .questions__answers {
-  color: hsl(240deg, 6%, 50%);
-  display: none;
-  height: 0px;
-  transition: all 1s ease-out;
+.card .questions .item__title {
+  font-size: 1.1em;
+  color: hsl(237deg, 12%, 33%);
 }
-.card .questions__answers__item {
+.card .questions .item__ico {
+  transform: rotate(180deg);
+  transition: 0.3s all;
+}
+.card .questions .item__footer {
+  color: hsl(240deg, 6%, 50%);
+  transition: 0.3s all;
+  top: 0;
+  transition: 0.3s;
+  height: 0px;
+  visibility: hidden;
+  display: block;
+  overflow-y: hidden;
+}
+.card .questions .item__answers {
   margin-top: 10px;
 }
 
