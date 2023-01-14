@@ -1,0 +1,47 @@
+@use 'variables' 
+
+.container
+    padding: 20px
+    
+.card
+    position: relative
+    background-color: white
+    max-width: 335px
+    margin: 30% auto //ajusta altura do card
+    padding: 100px 20px 60px 20px
+    border-radius: 20px
+    box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.2)
+    &__img
+        position: absolute
+        top: -105px
+        left: 50px
+        width: 70%
+    &__img2
+        position: absolute
+        top: 0px
+        left: 50px
+        width: 70%
+    &__title
+        text-align: center
+        font-size: 2.5em
+        margin-top: 20px
+    .questions
+        &__item
+            border-bottom: 2px solid variables.$dividers-color
+            padding: 20px 0px
+            &--active .questions__title
+                font-weight: 700
+            &--active .questions__answers
+                display: block
+                height: 30px
+        &__title
+            font-size: 1.1em
+            color: variables.$neutral-color1-text
+            cursor: pointer
+        &__answers
+            color: variables.$neutral-color2-text
+            display: none
+            height: 0px
+            transition: all 1s ease-out
+            &__item
+                margin-top: 10px

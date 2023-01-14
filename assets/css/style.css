@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(180deg, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  height: 100vh;
+}
+
+.container {
+  padding: 20px;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  max-width: 335px;
+  margin: 30% auto;
+  padding: 100px 20px 60px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.2);
+}
+.card__img {
+  position: absolute;
+  top: -105px;
+  left: 50px;
+  width: 70%;
+}
+.card__img2 {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  width: 70%;
+}
+.card__title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 20px;
+}
+.card .questions__item {
+  border-bottom: 2px solid hsl(240deg, 5%, 91%);
+  padding: 20px 0px;
+}
+.card .questions__item--active .questions__title {
+  font-weight: 700;
+}
+.card .questions__item--active .questions__answers {
+  display: block;
+  height: 30px;
+}
+.card .questions__title {
+  font-size: 1.1em;
+  color: hsl(237deg, 12%, 33%);
+  cursor: pointer;
+}
+.card .questions__answers {
+  color: hsl(240deg, 6%, 50%);
+  display: none;
+  height: 0px;
+  transition: all 1s ease-out;
+}
+.card .questions__answers__item {
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
