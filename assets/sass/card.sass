@@ -2,30 +2,36 @@
 
 .container
     padding: 20px
+    // background-color: blue
 
 .card
     position: relative
     background-color: white
     max-width: 335px
-    margin: 100px auto //ajusta altura do card
-    padding: 100px 20px 20px 20px
+    padding: 20px 20px 25px 20px
     border-radius: 20px
     box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.2)
+
+    &__header
+        height: 60px
     &__img
         position: absolute
-        top: -105px
-        left: 50px
-        width: 70%
+        top: -85px
+        left: 70px
+        width: 60%
+        // width: 200px
+        transition: all .9s
     &__img2
         position: absolute
         top: 0px
-        left: 50px
-        width: 70%
-    &__title
-        text-align: center
-        font-size: 2.5em
-        margin-top: 20px
+        left: 70px
+        width: 60%
+        transition: all .9s
     .questions
+        &__title
+            text-align: center
+            font-size: 2.5em
+            margin-top: 20px
         .item
             border-bottom: 2px solid variables.$dividers-color
             padding: 20px 0px
@@ -41,9 +47,12 @@
                 justify-content: space-between
                 align-items: center
                 cursor: pointer
+                &:hover .item__title
+                    color: variables.$primary-color2-text
             &__title
                 font-size: 1.1em
                 color: variables.$neutral-color1-text
+                transition: all .3s
             &__ico
                 transform: rotate(180deg)
                 transition: .3s all

@@ -1,0 +1,26 @@
+@use 'variables' 
+
+@media screen and (min-width: 900px)
+    body
+        // border: 10px solid black
+        .card
+            min-width: 760px
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            &__img
+                top: 60px
+                left: -60px
+                width: 50%
+                // transition: all .3s
+            &__img2
+                top: 250px
+                left: -210px
+                width: 70%
+                // transition: all .3s
+            .questions
+                &__title
+                    text-align: left
+                    // transition: all .3s
+
+                
+
